@@ -7,11 +7,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import UserList from '@apps/components/UserList.vue'
-
-type User = {
-  name: string
-  age: number
-}
+import { User } from 'types'
 
 export default Vue.extend({
   components: {

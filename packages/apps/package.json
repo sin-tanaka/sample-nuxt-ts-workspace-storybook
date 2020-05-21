@@ -16,7 +16,8 @@
     "nuxt": "^2.0.0",
     "@nuxt/typescript-runtime": "^0.4.0",
     "element-ui": "^2.4.11",
-    "@nuxtjs/axios": "^5.3.6"
+    "@nuxtjs/axios": "^5.3.6",
+    "types": "1.0.0"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.0",
