@@ -1,5 +1,7 @@
 <template>
   <div class="container">
+    <my-button>myButton</my-button>
+    <el-wrap-button @click="callFetch">elButton</el-wrap-button>
     <user-list :users="users" />
   </div>
 </template>
@@ -8,19 +10,26 @@
 import Vue from 'vue'
 import UserList from '@apps/components/UserList.vue'
 import { User } from 'types'
+import { usersModule } from '@apps/store'
+import { ElWrapButton, MyButton } from 'ui'
 
 export default Vue.extend({
   components: {
-    UserList
+    UserList,
+    MyButton,
+    ElWrapButton
   },
   computed: {
-    // mock users
-    users: (): User[] => {
-      return [
-        { name: 'Giorno Giovana', age: 20 },
-        { name: 'John Mayer', age: 30 },
-        { name: 'Michel Jackson', age: 44440 }
-      ]
+    users(): User[] {
+      return usersModule.users
+    }
+  },
+  async created() {
+    await this.callFetch()
+  },
+  methods: {
+    async callFetch() {
+      await usersModule.fetchUsers()
     }
   }
 })
