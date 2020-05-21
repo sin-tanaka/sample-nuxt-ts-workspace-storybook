@@ -49,6 +49,7 @@ export default {
    */
   build: {
     transpile: [/^element-ui/],
+    followSymlinks: true,
     /*
      ** You can extend webpack config here
      */
