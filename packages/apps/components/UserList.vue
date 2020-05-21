@@ -5,7 +5,7 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import UserListRow from '~/components/UserListRow.vue'
+import UserListRow from '~/packages/apps/components/UserListRow.vue'
 
 export default Vue.extend({
   components: {
