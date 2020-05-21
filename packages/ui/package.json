@@ -1,0 +1,11 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "author": "ShintaroTANAKA",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "element-ui": "^2.4.11"
+  }
+}
